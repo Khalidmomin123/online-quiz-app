@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Online Quiz Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>QuizMaster</h1>
+            <p>Test your knowledge with our interactive quiz platform</p>
+        </header>
+
+        <div class="content">
+            <!-- Welcome Screen -->
+            <div id="welcome-screen" class="screen active">
+                <div class="welcome-screen">
+                    <h2>Welcome to QuizMaster!</h2>
+                    <p>Challenge yourself with our collection of multiple-choice questions. Get instant feedback and track your progress.</p>
+                    
+                    <div class="quiz-info">
+                        <div class="info-item">
+                            <div class="info-value" id="total-questions-display">10</div>
+                            <div class="info-label">Questions</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">30</div>
+                            <div class="info-label">Seconds Each</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">100</div>
+                            <div class="info-label">Points</div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="username">Enter Your Name:</label>
+                        <input type="text" id="username" placeholder="Your name">
+                    </div>
+
+                    <div class="category-selection">
+                        <h3>Select Quiz Category:</h3>
+                        <div class="category-options">
+                            <div class="category-option active" data-category="general">
+                                <span>General Knowledge</span>
+                            </div>
+                            <div class="category-option" data-category="science">
+                                <span>Science</span>
+                            </div>
+                            <div class="category-option" data-category="history">
+                                <span>History</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+                </div>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="quiz-screen" class="screen">
+                <div class="quiz-header">
+                    <div class="quiz-info-bar">
+                        <div class="player-info">
+                            <span id="player-name">Player</span>
+                        </div>
+                        <div class="timer">
+                            <span>Time: </span>
+                            <span id="time">30</span>s
+                        </div>
+                        <div class="score">
+                            <span>Score: </span>
+                            <span id="current-score">0</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" id="quiz-progress"></div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <h2 id="question-number">Question 1 of 10</h2>
+                    <div id="question-text">What is the capital of France?</div>
+                    
+                    <div class="options-container" id="options-container">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button id="prev-btn" class="btn btn-secondary">Previous</button>
+                    <button id="next-btn" class="btn btn-primary">Next</button>
+                    <button id="submit-btn" class="btn btn-success">Submit Quiz</button>
+                </div>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="results-screen" class="screen">
+                <!-- Results content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
